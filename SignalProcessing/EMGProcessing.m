@@ -11,7 +11,7 @@ isswitch =1;
 issyncXsens = 1;
 
 %% Constantes
-mymuscles={'DeltA','DeltM','DeltP','BB','TB'};
+mymuscles={'DeltA','DeltM','UT','BB','TB'};
 mysyncs = {'SyncAccelX','SyncAccelY','SyncAccelZ'};
 myswitch = {'Switchs'};
 
@@ -27,14 +27,14 @@ Ordre= 2;
 lissagems=30;
 
 % Channel to Sync with XSens
-chanSync=22:24;
+chanSync=52:54;
 
 % PAramètre filtre Sync
 FcSync=[0.2,4];
 OrdreSync= 2;
 
 % Channel Switch
-chanSwitch = 52;
+chanSwitch = 62;
 
 %% Processing EMG
 
@@ -86,5 +86,5 @@ if isswitch
    
 end
 
-save([pathname,filename,'Delsys.mat'],'Delsys');
+save([pathname,'Processed',filename],'Delsys');
     
