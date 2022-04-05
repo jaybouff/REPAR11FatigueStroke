@@ -3,7 +3,7 @@ close all
 
 %% Load Delsys file
 [filename,pathname]=uigetfile('Go get your EMG file');
-
+cd(pathname);
 data=load([pathname,filename]);
 
 %% Switches
@@ -86,5 +86,5 @@ if isswitch
    
 end
 
-save([pathname,'Processed',filename],'Delsys');
+save([pathname,'Processed',filename],'Delsys','-mat');
     
