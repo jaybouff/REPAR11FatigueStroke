@@ -34,3 +34,17 @@ plot(mean(Table.ToIpsi.BB.smoothdata.tempnorm,2),'r','linewidth',2)
 plot(mean(Table.ToIpsi.TB.smoothdata.tempnorm,2),'m','linewidth',2)
 plot(mean(Table.ToIpsi.DeltA.smoothdata.tempnorm,2),'b','linewidth',2)
 title('DeltA ToIpsi')
+
+clf
+
+subplot(4,1,1)
+plot(mean(Table.ToContra.DeltM.smoothdata.tempnorm,2),'k','linewidth',2)
+
+subplot(4,1,2)
+plot(mean(Table.ToContra.BB.smoothdata.tempnorm,2),'r','linewidth',2)
+
+subplot(4,1,3)
+plot(mean(Table.ToContra.TB.smoothdata.tempnorm,2),'m','linewidth',2)
+
+subplot(4,1,4)
+plot(mean(Table.ToContra.DeltA.smoothdata.tempnorm,2),'b','linewidth',2)

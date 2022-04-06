@@ -21,6 +21,7 @@ for icycle=1:length(FromContra)
             index = round(SyncData{FromContra(icycle),1}*Delsys.(mymuscles{imuscle}).Fs):round(SyncData{FromContra(icycle),2}*Delsys.(mymuscles{imuscle}).Fs);
             Table.FromContra.(mymuscles{imuscle}).(myprocess{iprocess}).notempnorm{icycle} = Delsys.(mymuscles{imuscle}).(myprocess{iprocess})(index);
             Table.FromContra.(mymuscles{imuscle}).(myprocess{iprocess}).tempnorm(:,icycle) = interp1(1:length(index),Delsys.(mymuscles{imuscle}).(myprocess{iprocess})(index),1:(length(index)-1)/999:length(index));
+            %xlswrite('TableData.xlsx',Table.FromContra.(mymuscles{imuscle}).(myprocess{iprocess}).tempnorm,[(mymuscles{imuscle}),'_',(myprocess{iprocess}), 'FromContra']);
         end
     end
 end
